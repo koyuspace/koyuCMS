@@ -122,8 +122,8 @@
     <?php
     }
     ?>
-    <hr>
     <footer>
+    <hr>
     <?php echo getContent("_footer"); ?>
     </footer>
 </body>
