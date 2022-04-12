@@ -34,7 +34,7 @@
     <link rel="shortcut icon" href="/static/favicon.ico">
     <link rel="alternate" href="/feed.php">
     <?php
-    if ($route != "") {
+    if ($route != "" && siteExists($route, $type)) {
     $metadata = getMetadata($route, $type);
     ?>
     <meta property="og:type" content="website">
