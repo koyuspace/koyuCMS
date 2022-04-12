@@ -5,7 +5,7 @@ if (isset($metadata["comments"]["id"])) {
   <h2>Comments</h2>
   <p>You can use your account on the fediverse to reply to this <a class="link" target="_blank" href="https://<?php echo $metadata["comments"]["host"]; ?>/@<?php echo $metadata["comments"]["username"]; ?>/<?php echo $metadata["comments"]["id"]; ?>">post</a>.</p>
   <p><a class="button" href="https://<?php echo $metadata["comments"]["host"]; ?>/interact/<?php echo $metadata["comments"]["id"] ?>?type=reply" target="_blank">Reply</a></p>
-  <p id="mastodon-comments-list">Loading comments...</p>
+  <p id="comments-list">Loading comments...</p>
   <noscript><p>You need JavaScript to view the comments.</p></noscript>
   <script src="/assets/js/purify.min.js"></script>
   <script type="text/javascript">
@@ -26,7 +26,7 @@ if (isset($metadata["comments"]["id"])) {
       if(data['descendants'] &&
           Array.isArray(data['descendants']) && 
         data['descendants'].length > 0) {
-          document.getElementById('mastodon-comments-list').innerHTML = "";
+          document.getElementById('comments-list').innerHTML = "";
           data['descendants'].forEach(function(reply) {
             reply.account.display_name = twemoji.parse(escapeHtml(reply.account.display_name));
             reply.account.emojis.forEach(emoji => {
@@ -39,7 +39,7 @@ if (isset($metadata["comments"]["id"])) {
                 `<img src="${escapeHtml(emoji.static_url)}" class="emoji" alt="Emoji ${emoji.shortcode}" height="16" width="16" />`);
             });
             mastodonComment =
-              `<div class="mastodon-comment">
+              `<hr><div class="comment">
                   <div class="avatar">
                     <img src="${escapeHtml(reply.account.avatar_static)}" height=60 width=60 alt="">
                   </div>
@@ -51,13 +51,13 @@ if (isset($metadata["comments"]["id"])) {
                         View comment
                       </a>
                     </div>
-                    <div class="mastodon-comment-content">${reply.content}</div> 
+                    <div class="comment-content">${reply.content}</div> 
                   </div>
                 </div><br>`;
-            document.getElementById('mastodon-comments-list').appendChild(DOMPurify.sanitize(mastodonComment, {'RETURN_DOM_FRAGMENT': true, ADD_ATTR: ['target']}));
+            document.getElementById('comments-list').appendChild(DOMPurify.sanitize(mastodonComment, {'RETURN_DOM_FRAGMENT': true, ADD_ATTR: ['target']}));
           });
       } else {
-        document.getElementById('mastodon-comments-list').innerHTML = "<p>No comments found</p>";
+        document.getElementById('comments-list').innerHTML = "<p>No comments found</p>";
       }
     });
   </script>

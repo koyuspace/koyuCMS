@@ -55,3 +55,30 @@ body {
     font-family: "Lucida Console", Monaco, monospace;
     font-size: 85%;
   }
+  .emoji {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+  }
+
+  /* comments */
+  .comment {
+    padding: 10px;
+    margin: 10px;
+    display: inline-flex;
+  }
+
+  .comment .date { display: none; }
+  .comment .avatar { margin: 10px; }
+  .comment .author a { text-decoration: none !important; }
+
+  .comment .author {
+    text-align: left;
+    margin-top: 12px;
+  }
+
+  @media(min-width:800px) {
+    .comment {
+      width: 95%;
+    }
+  }

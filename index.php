@@ -88,7 +88,7 @@
         <?php
         if ($type == "post") {
         ?>
-        <style>.article-meta { margin-top: 0px !important; background: url(<?php echo $metadata["featured_image"]; ?>) #444; background-size: cover; background-position: center center; background-blend-mode: multiply; }</style>
+        <style>.article-meta { margin-top: 0px !important; background: url(<?php echo $metadata["featured_image"]; ?>) #ccc; background-size: cover; background-position: center center; background-blend-mode: overlay; }</style>
         <?php
         }
         ?>
@@ -117,10 +117,8 @@
     http_response_code(404);
     ?>
     <div class="error">
-        <h1>404</h1>
-        Not found.
+        <?php echo getContent("_404"); ?>
     </div>
-    <div style="text-align:center;margin-bottom:1em;"><a href="/">&larr; Return to front page</a></div>
     <?php
     }
     ?>
