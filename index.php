@@ -18,7 +18,7 @@
     <meta name="generator" content="koyuCMS 1.0">
     <?php
     $pagetitle = getMetadata("_index")["title"];
-    if ($route != "") {
+    if ($route != "" && siteExists($route, $type)) {
         $pagetitle = getMetadata($route, $type)["title"]." – ".getMetadata("_index")["title"];
     }
     ?>
