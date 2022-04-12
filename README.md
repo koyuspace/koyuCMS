@@ -10,7 +10,7 @@ koyuCMS is the content management system powering koyu's personal website.
 * Blogs and RSS support
 * Discord widget
 * Controllercons
-* Font awesome
+* Font Awesome
 
 ## Getting started
 
