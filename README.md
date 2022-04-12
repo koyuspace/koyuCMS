@@ -16,7 +16,7 @@ koyuCMS is the content management system powering koyu's personal website.
 
 If you want to add content to your site you can look for templates in the `templates` folder.
 
-### Using docker
+### Using Docker
 
 Just run the following `docker-compose` commands and you should see your content on port 2364.
 
