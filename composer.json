@@ -1,0 +1,12 @@
+{
+    "require": {
+        "symfony/yaml": "^6.0",
+        "league/commonmark": "^2.2",
+        "mnapoli/front-yaml": "^2.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "kylekatarnls/update-helper": true
+        }
+    }
+}
