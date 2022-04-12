@@ -23,13 +23,15 @@
     }
     ?>
     <title><?php echo $pagetitle; ?></title>
-    <link rel="stylesheet" href="/static/style.css">
-    <link rel="stylesheet" href="/static/custom.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <link rel="stylesheet" href="/static/css/controllercons.min.css">
+    <link rel="stylesheet" href="/static/css/controllercons-all.min.css">
     <script src="https://kit.fontawesome.com/8b5d897402.js" crossorigin="anonymous"></script>
     <script src="https://twemoji.maxcdn.com/v/13.1.0/twemoji.min.js" integrity="sha384-gPMUf7aEYa6qc3MgqTrigJqf4gzeO6v11iPCKv+AP2S4iWRWCoWyiR+Z7rWHM/hU" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.6/purify.min.js" integrity="sha512-DJjvM/U3zCRpzrYboJgg23iLHapWcS2rlo7Ni18Cdv+FMs6b3gUF7hQihztj4uVkHHfUwk7dha97jVzRqUJ7hg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/static/app.js"></script>
+    <script src="/static/appjs.php"></script>
     <?php echo getContent("_header"); ?>
     <link rel="shortcut icon" href="/static/favicon.ico">
     <link rel="alternate" href="/feed.php">
